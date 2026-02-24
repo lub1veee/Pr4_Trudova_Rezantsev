@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Pr4_Trudova_Rezantsev.Pages;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -27,7 +28,7 @@ namespace Pr4_Trudova_Rezantsev
 
         private void TextBlock_MouseDown(object sender, MouseButtonEventArgs e)
         {
-
+            MainFrame.Source = new Uri("Pages/MainPage.xaml", UriKind.Relative);
         }
     }
 }

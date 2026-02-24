@@ -16,8 +16,20 @@
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
             <RowDefinition Height="*"/>
-            <RowDefinition Height="8*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
-        
+        <StackPanel Grid.Row="1">
+            <Image Source="/Images/Formula1.jpg" Margin="10"/>
+            <Button Content="Формула 1" Margin="10" Height="30" Click="Button_Formula1"/>
+        </StackPanel>
+        <StackPanel Grid.Row="1" Grid.Column="1">
+            <Image Source="/Images/Formula2.jpg" Margin="10"/>
+            <Button Content="Формула 2" Margin="10" Height="30" Click="Button_Formula2"/>
+        </StackPanel>
+        <StackPanel Grid.Row="1" Grid.Column="2">
+            <Image Source="/Images/Formula3.jpg" Margin="10" />
+            <Button Content="Формула 3" Margin="10" Height="30" Click="Button_Formula3"/>
+        </StackPanel>
     </Grid>
 </Page>

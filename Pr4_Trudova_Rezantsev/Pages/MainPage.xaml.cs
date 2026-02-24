@@ -24,5 +24,10 @@ namespace Pr4_Trudova_Rezantsev.Pages
         {
             InitializeComponent();
         }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }
