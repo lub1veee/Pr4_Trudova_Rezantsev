@@ -21,13 +21,28 @@ namespace Pr4_Trudova_Rezantsev.Pages
     public partial class MainPage : Page
     {
         public MainPage()
-        {
+        { 
             InitializeComponent();
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
 
+        }
+
+        private void Button_Formula1(object sender, RoutedEventArgs e)
+        {
+            NavigationService.Navigate(new Formula1Page());
+        }
+
+        private void Button_Formula2(object sender, RoutedEventArgs e)
+        {
+            NavigationService.Navigate(new Formula2Page());
+        }
+
+        private void Button_Formula3(object sender, RoutedEventArgs e)
+        {
+            NavigationService.Navigate(new Formula3Page());
         }
     }
 }

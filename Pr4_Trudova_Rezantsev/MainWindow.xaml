@@ -17,6 +17,6 @@
             <RowDefinition Height="8*"/>
         </Grid.RowDefinitions>
         <TextBlock Grid.Row="0" Grid.Column="1" Text="Калькулятор f3" HorizontalAlignment="Center" FontSize="30" MouseDown="TextBlock_MouseDown" Cursor="Hand" VerticalAlignment="Center"/>
-        <Frame Source="Pages/MainPage.xaml" x:Name="MainFrame" Grid.Row="1" Grid.ColumnSpan="3"/>
+        <Frame Source="Pages/MainPage.xaml" x:Name="MainFrame" Grid.Row="1" Grid.ColumnSpan="3" NavigationUIVisibility="Hidden"/>
     </Grid>
 </Window>
