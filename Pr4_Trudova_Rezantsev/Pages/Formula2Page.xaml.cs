@@ -20,8 +20,7 @@ namespace Pr4_Trudova_Rezantsev.Pages
     /// </summary>
     public partial class Formula2Page : Page
     {
-
-        public Func<double, double> Fx;
+        public Func<double, double> Fx = x => Math.Sinh(x);
         public Formula2Page()
         {
             InitializeComponent();
@@ -29,37 +28,34 @@ namespace Pr4_Trudova_Rezantsev.Pages
 
         private void ButtonCount(object sender, RoutedEventArgs e)
         {
-
+            ResultBox.Text = CountResult().ToString();
         }
 
         private void ButtonClear(object sender, RoutedEventArgs e)
         {
-
+            xBox.Text = "";
+            pBox.Text = "";
+            ResultBox.Text = "";
         }
 
-        private string CountResult(double fx)
+        private double CountResult()
         {
-            ResultBox.Text = Formuler.CalculateFormul2(Fx, Formuler.ParseString(xBox.Text, pBox.Text));
+            return Formuler.CalculateFormul2(Fx, Formuler.ParseString(xBox.Text, pBox.Text));
         }
-
-        public double GetF() => 0;
 
         private void RbSh(object sender, RoutedEventArgs e)
         {
-            if(!double.TryParse(xBox.Text, out double x)) return;
-            Fx = g => Math.Sinh(g);
+            Fx = x => Math.Sinh(x);
         }
 
         private void RbX2(object sender, RoutedEventArgs e)
         {
-            if (!double.TryParse(xBox.Text, out double x)) return;
-            Fx = g => Math.Pow(g, 2);
+            Fx = x => Math.Pow(x, 2);
         }
 
         private void RbEx(object sender, RoutedEventArgs e)
         {
-            if (!double.TryParse(xBox.Text, out double x)) return;
-            Fx = g => Math.Pow(Math.E, g);
+            Fx = x => Math.Pow(Math.E, x);    
         }
     }
 }

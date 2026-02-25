@@ -33,16 +33,16 @@ namespace Pr4_Trudova_Rezantsev.Pages
                 Console.WriteLine(point);
             }
             if (points?.Length != 3) return;
-            string result = Formuler.CalculateFormul1(points[0], points[1], points[2]);
-            ResultBox.Text = result;
-            
+            double result = Formuler.CalculateFormul1(points[0], points[1], points[2]);
+            ResultBox.Text = result.ToString();
         }
 
         private void ButtonClear(object sender, RoutedEventArgs e)
         {
-
+            xBox.Text = "";
+            yBox.Text = "";
+            zBox.Text = "";
+            ResultBox.Text = "";
         }
-
-        
     }
 }
