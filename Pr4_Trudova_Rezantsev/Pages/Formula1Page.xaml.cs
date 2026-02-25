@@ -27,7 +27,15 @@ namespace Pr4_Trudova_Rezantsev.Pages
 
         private void ButtonCount(object sender, RoutedEventArgs e)
         {
-
+            double[] points = Formuler.ParseString(xBox.Text, yBox.Text, zBox.Text);
+            foreach (double point in points)
+            {
+                Console.WriteLine(point);
+            }
+            if (points?.Length != 3) return;
+            string result = Formuler.CalculateFormul1(points[0], points[1], points[2]);
+            ResultBox.Text = result;
+            
         }
 
         private void ButtonClear(object sender, RoutedEventArgs e)
@@ -35,10 +43,6 @@ namespace Pr4_Trudova_Rezantsev.Pages
 
         }
 
-        private string CalculateFormul(double x, double y, double z)
-        {
-            if(x >= y || x == 0) return "Ошибка";
-            return Math.Abs(Math.Pow(x,(y/x) - Math.)
-        }
+        
     }
 }

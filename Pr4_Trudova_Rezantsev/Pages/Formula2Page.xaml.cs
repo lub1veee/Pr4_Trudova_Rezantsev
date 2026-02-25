@@ -20,9 +20,46 @@ namespace Pr4_Trudova_Rezantsev.Pages
     /// </summary>
     public partial class Formula2Page : Page
     {
+
+        public Func<double, double> Fx;
         public Formula2Page()
         {
             InitializeComponent();
+        }
+
+        private void ButtonCount(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void ButtonClear(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private string CountResult(double fx)
+        {
+            ResultBox.Text = Formuler.CalculateFormul2(Fx, Formuler.ParseString(xBox.Text, pBox.Text));
+        }
+
+        public double GetF() => 0;
+
+        private void RbSh(object sender, RoutedEventArgs e)
+        {
+            if(!double.TryParse(xBox.Text, out double x)) return;
+            Fx = g => Math.Sinh(g);
+        }
+
+        private void RbX2(object sender, RoutedEventArgs e)
+        {
+            if (!double.TryParse(xBox.Text, out double x)) return;
+            Fx = g => Math.Pow(g, 2);
+        }
+
+        private void RbEx(object sender, RoutedEventArgs e)
+        {
+            if (!double.TryParse(xBox.Text, out double x)) return;
+            Fx = g => Math.Pow(Math.E, g);
         }
     }
 }

@@ -9,6 +9,38 @@
       Title="Formula2Page">
 
     <Grid>
-        
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="4*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="5*"/>
+        </Grid.RowDefinitions>
+        <StackPanel Grid.Row="1" Grid.Column="1">
+            <Image Source="/Images/Formula2.jpg"/>
+            <StackPanel Orientation="Horizontal">
+                <StackPanel Margin="10" Height="150">
+                    <TextBlock Text="x" FontSize="15" Margin="2"/>
+                    <TextBlock Text="p" FontSize="15" Margin="2"/>
+                    <StackPanel>
+                        <RadioButton Content="sh(x)" GroupName="functions" Checked="RbSh"/>
+                        <RadioButton Content="x^2" GroupName="functions" Checked="RbX2"/>
+                        <RadioButton Content="e^x" GroupName="functions" Checked="RbEx"/>
+                    </StackPanel>
+                    <TextBlock Text="Ответ" FontSize="15" Margin="2"/>
+                </StackPanel>
+                <StackPanel Margin="0,12,0,40">
+                    <TextBox x:Name="xBox" Width="60" FontSize="15" Margin="2"/>
+                    <TextBox x:Name="pBox" Width="60" FontSize="15" Margin="2"/>
+                    <TextBox x:Name="ResultBox" Width="60" FontSize="15" Margin="0,40,0,0" IsReadOnly="True"/>
+                </StackPanel>
+                <StackPanel Margin="40" VerticalAlignment="Bottom">
+                    <Button Height="20" Width="90" Content="Вычислить" Click="ButtonCount"/>
+                    <Button Height="20" Width="90" Content="Очистить" Click="ButtonClear" Margin="0,10,0,0"/>
+                </StackPanel>
+            </StackPanel>
+        </StackPanel>
     </Grid>
 </Page>
