@@ -29,14 +29,14 @@
                     <TextBlock Text="Ответ" FontSize="15" Margin="2"/>
                 </StackPanel>
                 <StackPanel Margin="10" Height="110">
-                    <TextBox x:Name="xBox" Width="60" FontSize="15" Margin="2"/>
-                    <TextBox x:Name="yBox" Width="60" FontSize="15" Margin="2"/>
-                    <TextBox x:Name="zBox" Width="60" FontSize="15" Margin="2"/>
-                    <TextBox x:Name="ResultBox" Width="60" FontSize="15" Margin="2" IsReadOnly="True"/>
+                    <TextBox x:Name="xBox" Width="60" FontSize="15" Margin="2" ToolTip="Введите x"/>
+                    <TextBox x:Name="yBox" Width="60" FontSize="15" Margin="2" ToolTip="Введите y"/>
+                    <TextBox x:Name="zBox" Width="60" FontSize="15" Margin="2" ToolTip="Введите z"/>
+                    <TextBox x:Name="ResultBox" Width="60" FontSize="15" Margin="2" IsReadOnly="True" ToolTip="Результат"/>
                 </StackPanel>
                 <StackPanel Margin="20" VerticalAlignment="Bottom">
-                    <Button Height="20" Width="90" Content="Вычислить" Click="ButtonCount"/>
-                    <Button Height="20" Width="90" Content="Очистить" Click="ButtonClear" Margin="0,10,0,0"/>
+                    <Button Height="20" Width="90" Content="Вычислить" Click="ButtonCount" ToolTip="Вычислить"/>
+                    <Button Height="20" Width="90" Content="Очистить" Click="ButtonClear" Margin="0,10,0,0" ToolTip="Очистить"/>
                 </StackPanel>
             </StackPanel>
         </StackPanel>

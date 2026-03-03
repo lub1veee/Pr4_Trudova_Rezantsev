@@ -26,10 +26,10 @@
                     <TextBlock Text="Ответ" FontSize="15"/>
                 </StackPanel>
                 <StackPanel Margin="10" Height="200">
-                    <TextBox x:Name="xBox" Width="90" FontSize="15" Margin="2"/>
-                    <TextBox x:Name="ResultBox" Width="90" Height="80" FontSize="15" Margin="2" IsReadOnly="True"/>
-                    <Button Height="20" Width="90" Content="Вычислить" Click="ButtonCount"/>
-                    <Button Height="20" Width="90" Content="Очистить" Click="ButtonClear" Margin="0,10,0,0"/>
+                    <TextBox x:Name="xBox" Width="90" FontSize="15" Margin="2" ToolTip="Введите x"/>
+                    <TextBox x:Name="ResultBox" Width="90" Height="80" FontSize="15" Margin="2" IsReadOnly="True" ToolTip="Результат"/>
+                    <Button Height="20" Width="90" Content="Вычислить" Click="ButtonCount" ToolTip="Вычислить"/>
+                    <Button Height="20" Width="90" Content="Очистить" Click="ButtonClear" Margin="0,10,0,0" ToolTip="Очистить"/>
                 </StackPanel>
                 <WindowsFormsHost Grid.Row="1" Grid.Column="1" Height="150">
                     <charts:Chart x:Name="FuncGraph">
