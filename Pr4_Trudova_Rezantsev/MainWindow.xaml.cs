@@ -30,5 +30,18 @@ namespace Pr4_Trudova_Rezantsev
         {
             MainFrame.Source = new Uri("Pages/MainPage.xaml", UriKind.Relative);
         }
+
+        private void Window_Closing(object sender, System.ComponentModel.CancelEventArgs e)
+        {
+            MessageBoxResult result = MessageBox.Show("Вы уверены, что хотите выйти?",
+                                                      "Подтверждение выхода",
+                                                      MessageBoxButton.YesNo,
+                                                      MessageBoxImage.Question);
+
+            if (result == MessageBoxResult.No)
+            {
+                e.Cancel = true;
+            }
+        }
     }
 }
